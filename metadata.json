@@ -1,0 +1,6 @@
+{
+  "name": "3B 파트너스 - D2C 빌더 & 크리에이터 협력 상품제작",
+  "description": "3B 파트너스는 크리에이터의 아이디어와 IP를 프리미엄 상품과 글로벌 D2C 브랜드로 빌드업하는 전문 상품제작·브랜딩 파트너입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

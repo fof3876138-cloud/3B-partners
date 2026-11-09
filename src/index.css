@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --accent-yellow: #FFE600;
+    --accent-pink: #FF2E93;
+    --bg-base: #08080A;
+  }
+
+  body {
+    background-color: #08080A;
+    color: #FFFFFF !important;
+    font-family: 'Noto Sans KR', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body, h1, h2, h3, h4, h5, h6, p, span, div, a, button, input, textarea, select, label, th, td, li {
+    color: #FFFFFF;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(13, 13, 18, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgba(255, 230, 0, 0.7), rgba(255, 46, 147, 0.7));
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, rgba(255, 230, 0, 0.95), rgba(255, 46, 147, 0.95));
+}
+
+/* Gradient point backgrounds */
+.bg-yellow-pink-gradient {
+  background: linear-gradient(135deg, #FFE600 0%, #FF2E93 100%);
+}
+
+.bg-yellow-pink-soft {
+  background: linear-gradient(135deg, rgba(255, 230, 0, 0.12) 0%, rgba(255, 46, 147, 0.12) 100%);
+}
+
+.bg-yellow-pink-card {
+  background: linear-gradient(145deg, rgba(20, 20, 26, 0.95) 0%, rgba(25, 22, 28, 0.9) 50%, rgba(22, 20, 28, 0.95) 100%);
+}
+
+.border-yellow-pink {
+  border-image: linear-gradient(to right, #FFE600, #FF2E93) 1;
+}
+
+.glow-yellow-pink {
+  box-shadow: 0 10px 30px -5px rgba(255, 46, 147, 0.3), 0 0 20px -3px rgba(255, 230, 0, 0.3);
+}
+
+/* Starlight slow gentle twinkle animation (3s ~ 5s) */
+@keyframes star-twinkle {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.25);
+  }
+}
+
+.animate-star-twinkle {
+  animation: star-twinkle var(--twinkle-duration, 4s) ease-in-out infinite var(--twinkle-delay, 0s);
+}
+
+/* Mobile Media Query Rules (@media (max-width: 768px)) */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* Prevent text clipping and allow natural word wrapping */
+  h1, h2, h3, h4, p, span {
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  /* Compact section vertical paddings on mobile */
+  section {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  /* Compact input & button sizing on mobile screens */
+  input, select, textarea {
+    font-size: 14px !important;
+  }
+}
+
+
